@@ -1,4 +1,4 @@
-# justification_claims
+# Justification Claims
 
 ##Project Goals
 Original Intent
