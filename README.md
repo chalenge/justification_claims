@@ -1,13 +1,13 @@
 # justification_claims
 
-Project Goals
+##Project Goals
 Original Intent
 The goals of this project were to discover how authors of messages on open source mailing lists make justification claims by use of an unsupervised approach to recognize justificatory discourse relations. This approach builds off Rhetorical Structure Theory and follows the approach of Marcu and Echihabi’s 2002 paper: An Unsupervised Approach to Recognizing Discourse Relations.
 
-Progress
+##Progress
 We were able to extract text from emails by using the BigBang toolkit and extract justificatory claim text spans with a cue phrase extraction. We then attempted to follow Marcu and Echihabi but discovered we likely needed a much larger coded data set to evaluate a classifier. We shifted our approach from identifying the justificatory claims to identifying types of such claims first extracted through the cue phrase patterns. We hand coded six categories of justification claim and developed a Naïve Bayes classifier. With the small hand-coded data set (n = 403) we were able to reach a proof of concept with a ~33% accuracy with k-fold cross validation in differentiating among the six possible classifications. We also developed an SVM classifier that we were able to develop to a similar performance level.
 
-Future Work
+##Future Work
 There would be much benefit in being able to better clean these emails. The emails on the open source mailing we examined were generally very technical in nature, posing unique challenges. Improvement in isolating code in messages, both in code blocks and in-line, and in better sentence tokenization for this sort of data set would be useful. Future work would also require a much larger tagged data set to better train and evaluate the classifier. Testing strategies built off a tagged RST corpus such as the Penn Discourse Treebank would likely prove useful.
 Additional work that might improve our results includes the application of more rigorous standards and distinctions between the types of justification claims that we hand tagged. More hand tagged samples would also likely have proved useful. Lastly, there may be some benefit of identifying and extracting features to support identification of specific claim types. A tighter specification for a human tagger would likely support efforts to extract features that may be useful in distinguishing one particular justification claim type.
 With distinct justificatory claims types identified, it may be possible to classify members of open source communities and the communities themselves by the types of claims they make. The various types may be a useful metric in attempting to distinguish positions of power or influence within communities. Predicting the longevity or future volume of messages sent by a particular member may be possible. It may be possible to use preponderance of particular types of justification as a proxy for discourse quality, perhaps predicting the health of a community. Could a tool successfully identifying claim types help improve the quality of discourse in a community?
